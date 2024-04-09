@@ -1,0 +1,32 @@
+#wpbody-content{
+	display: flex;
+	flex-wrap: wrap;
+}
+#wpbody-content .wrap{
+	padding: 2% 4%;
+	background: #e5e5e5;
+}
+#wpbody-content .info_theme .list_Theme li b{
+	font-size: 16px;
+}
+#wpbody-content .wrap .btn{
+	padding:10px;
+	border-radius: 5px;
+	color:#fff;
+	margin-right: 10px;
+	text-decoration: none;
+	transition: 0.5s;
+}
+#wpbody-content .wrap .btn:hover{
+	opacity: 0.8;
+}
+#wpbody-content .wrap .facebook{
+	background:#3b5998 ;
+}
+#wpbody-content .wrap .instagram{
+	background:#E1306C ;
+}
+#wpbody-content .wrap .linkedIn{
+	background:#0e76a8;
+}
+
