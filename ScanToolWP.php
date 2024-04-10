@@ -188,4 +188,38 @@ function registrar_campos_personalizados_libros() {
 }
 add_action('init', 'registrar_campos_personalizados_libros');
 
+function mostrar_campos_personalizados_libro() {
+    global $post;
+    $nombre = get_post_meta($post->ID, 'nombre', true);
+    $genero = get_post_meta($post->ID, 'genero', true);
+    $autor = get_post_meta($post->ID, 'autor', true);
+    $ano_publicacion = get_post_meta($post->ID, 'ano_publicacion', true);
+    $imagen = get_the_post_thumbnail($post->ID,'large');
+    ?>
+    <div class="entry-content">
+	    <div class="misc-pub-section">
+	        <span><?php echo $imagen; ?></span>   
+	    		<br>
+	        <label>Nombre del libro:</label>
+	        <span><?php echo esc_html($nombre); ?></span>
+	    <br>
+	        <label>Género del libro:</label>
+	        <span><?php echo esc_html($genero); ?></span>
+	    <br>
+	        <label>Autor del libro:</label>
+	        <span><?php echo esc_html($autor); ?></span>
+	    <br>
+	        <label>Año de publicación:</label>
+	        <span><?php echo esc_html($ano_publicacion); ?></span>
+	    </div>
+	</div>
+    
+    <?php
+}
+add_action('edit_form_after_title', 'mostrar_campos_personalizados_libro');
+
+
+
+
+
 
